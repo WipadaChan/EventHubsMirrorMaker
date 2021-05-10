@@ -10,7 +10,7 @@ parse_dns () {
         echo `expr substr $1 $SSTART $SEND`
 }
 
-SOURCE_DNS=$(parse_dns $SOURCE_CON_STR)
+#SOURCE_DNS=$(parse_dns $SOURCE_CON_STR)
 DEST_DNS=$(parse_dns $DEST_CON_STR)
 CONSUMER_CONFIG="bootstrap.servers=52.175.55.32:9092\nrequest.timeout.ms=60000\ngroup.id=eh-mirrormaker-group\nexclude.internal.topics=true;"
 echo -e $CONSUMER_CONFIG > consumer.config
