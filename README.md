@@ -1,5 +1,14 @@
 # EventHubsMirrorMaker
-This sample uses Azure Event Hubs Kafka MirrorMaker running on an Azure Container Instance and then it creates a second container as a load generator. Use the Cloud Shell in the Azure portal to give this a try. This will also work from bash if you have the Azure CLI installed.
+This sample uses Azure Container Instance running Kafka MirrorMaker that mirror Kafka message from a Kafka server that run on VM to Azure Event Hub. 
+
+## Prerequisite:  
+1. VM that run Kafka service (where we will mirror a message) https://github.com/rajatrakesh/hdikafka#setup-on-prem-kafka or any Kafka Cluster
+2. Create Event Hub namespace https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create 
+
+## Setup:
+1. In this sample, I build a custom image using Dockerfile in this repo. It installed Java and Kafka. 
+2. I use VSCode with Docker extension to build and test image locally
+3. Once it works, I use VSCode to 
 
 ## Setup a few variables to make your life infinitely easier
 ```
